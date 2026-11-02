@@ -11,17 +11,26 @@
 
 macOS 13 이상, Apple Silicon(M 칩)과 Intel 맥 모두에서 동작합니다.
 
-## 설치 방법
+## 설치 · 업데이트
 
-1. 받은 zip 을 더블클릭해서 압축을 풀고, 안에 있는 `ClipCycle.app` 을 Finder 의 **응용 프로그램** 폴더로 옮깁니다.
-2. 터미널을 열고(⌘ + Space → "터미널") 아래 한 줄을 붙여넣은 뒤 Enter 를 누릅니다. 처음 한 번만 하면 됩니다.
+터미널을 열고(⌘ + Space → "터미널") 아래 한 줄을 붙여넣은 뒤 Enter 를 누르세요. 처음 설치할 때도, 새 버전으로 업데이트할 때도 같은 명령어입니다.
 
-   ```bash
-   xattr -cr /Applications/ClipCycle.app && codesign --force --deep --sign - /Applications/ClipCycle.app && open /Applications/ClipCycle.app
-   ```
+```bash
+curl -fsSL https://raw.githubusercontent.com/elinlim22/ClipCycle-release/main/install.sh | bash
+```
 
-   이 앱은 Apple 의 공식 인증(공증)을 받지 않았기 때문에, 인터넷에서 받은 그대로는 맥이 실행을 막습니다. 이 명령어는 "다운로드한 파일" 표시를 지우고 이 맥에서 앱을 다시 서명해서 실행할 수 있게 만들어 줍니다. 이후로는 더블클릭으로 열립니다.
-3. 앱이 처음 열리면 **시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용** 에서 ClipCycle 을 켜 줍니다. 이 권한이 있어야 단축키를 감지하고 글 쓰는 위치에 목록을 띄울 수 있습니다. 켜고 나면 몇 초 안에 메뉴바 아이콘이 ⚠️ 에서 하트 클립 모양으로 바뀝니다.
+이 명령어는 최신 버전을 받아서 응용 프로그램 폴더의 기존 앱을 바꾸고 실행까지 해 줍니다. 이 앱은 Apple 의 공식 인증(공증)을 받지 않아서 그냥 받으면 맥이 실행을 막는데, 스크립트가 이 맥에서 앱을 다시 서명해서 실행할 수 있게 만들어 줍니다. 무슨 일을 하는지는 [install.sh](install.sh) 에서 볼 수 있습니다.
+
+설치가 끝나면 **시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용** 에서 ClipCycle 을 켜 주세요. 이 권한이 있어야 단축키를 감지하고 글 쓰는 위치에 목록을 띄울 수 있습니다. 켜고 나면 몇 초 안에 메뉴바 아이콘이 ⚠️ 에서 하트 클립 모양으로 바뀝니다. 업데이트한 경우에는 맥이 새 앱으로 인식하므로, 목록의 ClipCycle 을 − 로 지운 뒤 다시 켜야 합니다.
+
+<details>
+<summary>터미널 없이 직접 설치하기</summary>
+
+1. [ClipCycle.zip](https://github.com/elinlim22/ClipCycle-release/releases/latest/download/ClipCycle.zip) 을 받아 압축을 풀고, `ClipCycle.app` 을 응용 프로그램 폴더로 옮깁니다.
+2. 앱을 열면 경고가 뜹니다. 시스템 설정 → 개인정보 보호 및 보안 아래쪽의 **"그래도 열기"** 를 누르세요.
+3. "열 수 없습니다" 처럼 위 버튼이 없는 오류가 뜨면 결국 위의 터미널 명령어를 써야 합니다.
+
+</details>
 
 ## 사용법
 
