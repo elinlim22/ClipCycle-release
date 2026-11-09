@@ -38,6 +38,7 @@ curl -fsSL https://raw.githubusercontent.com/elinlim22/ClipCycle-release/main/in
 | --- | --- |
 | ⌘⌥ 누른 채 V | 목록 열기, 한 번 더 누를 때마다 다음 항목 |
 | ⌘⌥ 누른 채 C | 이전 항목 |
+| ↑ / ↓ | 이전 / 다음 항목 |
 | ⌫ (delete) | 선택한 항목을 기록에서 삭제 |
 | ⌘ 또는 ⌥ 떼기 | 선택한 항목 붙여넣기 |
 | Esc | 취소 |
